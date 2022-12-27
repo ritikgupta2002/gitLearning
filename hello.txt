@@ -1,3 +1,6 @@
 hello i am ritik and i am learning git 
 hakunama tata
 jungle
+juice 
+tea
+coffee
