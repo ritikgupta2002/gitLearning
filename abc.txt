@@ -1,2 +1,4 @@
 hii i this is a txt file .
 this file is amazing , having a lot of fun 
+this file is also amazing , i wanted this change to be included in previous commit 
+that's why i am writing this paragraph .
