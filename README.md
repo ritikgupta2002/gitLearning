@@ -1,6 +1,5 @@
-Why do we need VCS?
-
-               
+    Why do we need VCS?
+            
 Revert back to previous states.
 Compare changes with previous states to find bugs 
 Useful for working in teams, tracks all changes made by each team member 
@@ -8,11 +7,11 @@ So that it becomes easy to find the bug if present
 If data loss from your local machine , then whole code will be lost so 
 In that phase we need git which stores our code in the remote server so that if there is a data loss in your machine we can easily download it 
 
-What is the working directory ?
+    What is the working directory ?
 
 The contents of your project folder (the folders and files you find within it) are represented by the working directory.Every directory has its own repository .
 
-What is the repository ?
+    What is the repository ?
 
 .git folder (which is a hidden folder ) represents the repository .
 In this folder we store the tracking record of each file in the working directory 
@@ -27,7 +26,7 @@ A commit is basically a version of your project and each commit has a 40 charact
 
 The commits are in the commit history (objects folder).
             
-            So in order to add a file to our repository:-
+So in order to add a file to our repository:-
 
 First we create a file in our project folder so it goes in our working directory
 Then we add it to the staging area (using the git add command)
@@ -35,39 +34,44 @@ And then it becomes part of a commit in our commit history (using the git commit
                                   Or (last point )
 Then you can use 'git commit' to further push your changes from staging area to local repo(which is a copy of your master repo)
  
-         Types of VCS
+                      Types of VCS
  
-  Centralised VCS :- 
+Centralised VCS :- 
 
-#In centralised source control, there is a server and a client. The server is the master repository that contains all of the versions of the code.
- #The basic workflow involved in the centralised source control is getting the latest version of the code(not all versions ) from a central repository that will contain other people’s code(latest version modifications) as well, then make your own changes in the code, and then committing or merging those changes into the central repository straight forward .
+1.In centralised source control, there is a server and a client. The server is the master repository that contains all of the versions of the code.
+
+2.The basic workflow involved in the centralised source control is getting the latest version of the code(not all versions ) from a central repository that will contain other people’s code(latest version modifications) as well, then make your own changes in the code, and then committing or merging those changes into the central repository straight forward .
  #Thus making a new version of the source code, So everything is centralised in this   model. 
  #There will be just one repository and that will contain all the history or version of the code and different branches of the code.i.e master repo
-# The need for the internet is important .
 
-  Distributed VCS :- 
+3.The need for the internet is important .
 
-#git is a distributed vcs 
+#
+ Distributed VCS :- 
 
-#In distributed version control most of the mechanism or model applies the same as centralised. The only major difference you will find here is, instead of one single repository which is the server or master repository , here every single developer or client has their own server or local repo ,and they will have a copy of the entire history or version of the code and all of its branches in their local server or machine( local repo is kind of a mirror image of master repo )
+git is a distributed vcs 
 
-#Basically, every client or user can work locally and disconnected which is more convenient than centralised source control and that’s why it is called distributed. 
+1.In distributed version control most of the mechanism or model applies the same as centralised. The only major difference you will find here is, instead of one single repository which is the server or master repository , here every single developer or client has their own server or local repo ,and they will have a copy of the entire history or version of the code and all of its branches in their local server or machine( local repo is kind of a mirror image of master repo )
 
-           #So when you start working on a project, you clone the code from the master repository in your own hard drive, then you get the code from your own repository to make changes and after doing changes, you commit your changes to your local repository and at this point, your local repository will have ‘change sets‘ but it is still disconnected with the master repository (master repository will have different ‘sets of changes‘ from each and every individual developer’s repository), so to communicate with it, you issue a request to the master repository and push your local repository code to the master repository. 
-            Getting the new change from a repository is called “pulling” and merging your local repository’s ‘set of changes’ is called “pushing“. 
-            It doesn’t follow the way of communicating or merging the code straight forward to the master repository after making changes
-            Firstly you commit all the changes in your own server or local repository and then the set of changes’ will merge to the master repository. 
+2.Basically, every client or user can work locally and disconnected which is more convenient than centralised source control and that’s why it is called distributed. 
 
- # DVCS is faster than CVCS because you don’t need to communicate with the remote server for each and every command. You do everything locally which gives you the benefit to work faster than CVCS.
+3.So when you start working on a project, you clone the code from the master repository in your own hard drive, then you get the code from your own repository to make changes and after doing changes, you commit your changes to your local repository and at this point, your local repository will have ‘change sets‘ but it is still disconnected with the master repository (master repository will have different ‘sets of changes‘ from each and every individual developer’s repository), so to communicate with it, you issue a request to the master repository and push your local repository code to the master repository. 
 
- # If the project has a long history or the project contain large binary files, in that case, downloading the entire project in DVCS can take more time and space than usual, whereas in CVCS you just need to get few lines of code because you don’t need to save the entire history or complete project in your own server so there is no requirement for additional space.
+Getting the new change from a repository is called “pulling” and merging your local repository’s ‘set of changes’ is called “pushing“. 
+It doesn’t follow the way of communicating or merging the code straight forward to the master repository after making changes
+Firstly you commit all the changes in your own server or local repository and then the set of changes’ will merge to the master repository. 
 
- # If the main server goes down or it crashes in DVCS, you can still get the backup or entire history of the code from your local repository or server where all  the version of the code is already saved. This is not in the case of CVCS, there is just a single remote server that has the entire code history.
+4.DVCS is faster than CVCS because you don’t need to communicate with the remote server for each and every command. You do everything locally which gives you the benefit to work faster than CVCS.
 
- # files remain in 3 states in git shown in the image below .
-   untrack
-   Staged,
-   committed
+5.If the project has a long history or the project contain large binary files, in that case, downloading the entire project in DVCS can take more time and space than usual, whereas in CVCS you just need to get few lines of code because you don’t need to save the entire history or complete project in your own server so there is no requirement for additional space.
+
+6.If the main server goes down or it crashes in DVCS, you can still get the backup or entire history of the code from your local repository or server where all  the version of the code is already saved. This is not in the case of CVCS, there is just a single remote server that has the entire code history.
+
+7.files remain in 3 states in git shown in the image below .
+
+    untrack
+    Staged,
+    committed
 
 
      
@@ -87,44 +91,47 @@ Some basic commands
 
 to check the version 
 
-1)git --version 
+     1)git --version 
 
 to initiate a new repository 
 
-1)git init <filename>
+     1)  git init <filename>
 this will create a .git folder in the current directory and remove the previous local repo in the current dir.
 
 to check what are the files in our directory 
-1) ls 
+
+     1)  ls 
 
 to give the alias to a command 
 
-1)git config --global alias.cmt ‘commit’ [this is for global use you can do it for local by writing local inplace of global ]
+    1)git config --global alias.cmt ‘commit’ [this is for global use you can do it for local by writing local inplace of global ]
 we can use git cmt instead of git commit in future.
 
 to get help 
 
-1) git help
+    1) git help
 
 to check the status 
 
-1) git status 
+    1) git status 
 
 to see what are the files which are being tracked by git 
 
-1)git ls-files(this contains all the files which are being committed and are on staging area )
+    1)git ls-files(this contains all the files which are being committed and are on staging area )
 
 to stage the file 
-1)git add . (to add all the files in the directory in the staging area )
-2)git add <filename1> <filename2> ....etc (used to add selected file to staging area)
+
+     1)git add . (to add all the files in the directory in the staging area )
+
+     2)git add <filename1> <filename2> ....etc (used to add selected file to staging area)
 
 to commit the file 
 
-1) git commit -m "message"
+     1) git commit -m "message"
 
 To amend the commit 
 
-1)git commit --amend 
+     1)git commit --amend 
 
 It is not a good practice to do dirty commits like for ex we wrote some code and did the commit after doing commit we realised that we have forgotten to include some 5-6 line code ,now what do we do? , if we add  code to the file  and then again do the next commit that would not be a good practice that would be a dirty commit ,because every commit has a very imp significance , so what you do is you do correction in  the previous commit only by using this command 
 
